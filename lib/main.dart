@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'setting1.dart';
 
 void main() {
   runApp(const FigmaToCodeApp());
@@ -34,7 +35,7 @@ class Main extends StatelessWidget {
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: NetworkImage("assets/Background/PinkBG.png"),
+              image: AssetImage("assets/Background/PinkBG.png"),
               fit: BoxFit.fill,
             ),
           ),
@@ -49,21 +50,19 @@ class Main extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 40,
-                    fontFamily: 'ONE Mobile POP OTF',
+                    fontFamily: 'assets/ONE Mobile POP OTF.otf',
                     fontWeight: FontWeight.w400,
                     height: 0,
                   ),
                 ),
               ),
-              Positioned(
-                left: 27,
-                top: 284,
+              Center(
                 child: Container(
                   width: 338,
                   height: 336,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage("assets/BackGround/Circle.png"),
+                      image: AssetImage("assets/BackGround/Circle.png"),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -78,26 +77,16 @@ class Main extends StatelessWidget {
                   child: Stack(
                     children: [
                       Positioned(
-                        left: 332,
-                        top: 222,
-                        child: Transform(
-                          transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(3.14),
-                          child: Container(
-                            width: 127,
-                            height: 123,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: NetworkImage("assets/Character/pcharacter.png"),
-                                fit: BoxFit.fill,
-                              ),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Color(0x3F000000),
-                                  blurRadius: 4,
-                                  offset: Offset(0, 4),
-                                  spreadRadius: 0,
-                                )
-                              ],
+                        left: 205,
+                        top: 176,
+                        child: Container(
+                          width: 127,
+                          height: 123,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image:
+                                  AssetImage("assets/Character/pcharacter.png"),
+                              fit: BoxFit.fill,
                             ),
                           ),
                         ),
@@ -110,17 +99,9 @@ class Main extends StatelessWidget {
                           height: 93,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("assets/Character/bcharacter.png"),
+                              image: AssetImage("assets/Character/bcharacter.png"),
                               fit: BoxFit.fill,
                             ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color(0x3F000000),
-                                blurRadius: 4,
-                                offset: Offset(0, 4),
-                                spreadRadius: 0,
-                              )
-                            ],
                           ),
                         ),
                       ),
@@ -139,19 +120,28 @@ class Main extends StatelessWidget {
                       Positioned(
                         left: 117,
                         top: 49,
-                        child: Container(
-                          width: 52,
-                          height: 52,
-                          decoration: ShapeDecoration(
-                            color: Colors.white,
-                            shape: OvalBorder(),
-                            shadows: [
-                              BoxShadow(
-                                color: Color(0x3F000000),
-                                blurRadius: 4,
-                                offset: Offset(0, 4),
-                                spreadRadius: 0,
-                              )
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => Setting1())
+                            );
+                          },
+                          child: Stack(
+                            children: [
+                              Center(
+                                child: Container(
+                                  width: 52,    // 로고의 너비
+                                  height: 52,   // 로고의 높이
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle, // 원 모양
+                                    color: Colors.white,     // 원의 색상
+                                  ),
+                                  child: Image.asset(
+                                    'assets/Icon/google_logo.png',
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -214,32 +204,6 @@ class Main extends StatelessWidget {
                           height: 24.93,
                           child: Stack(children: [
                               ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 0,
-                top: 831,
-                child: Container(
-                  height: 21,
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  decoration: BoxDecoration(color: Colors.white.withOpacity(0)),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Container(
-                        width: 134,
-                        height: 5,
-                        decoration: ShapeDecoration(
-                          color: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(100),
-                          ),
                         ),
                       ),
                     ],

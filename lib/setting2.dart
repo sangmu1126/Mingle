@@ -40,7 +40,7 @@ class Setting2 extends StatelessWidget {
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: NetworkImage("https://via.placeholder.com/393x852"),
+              image: AssetImage('assets/BackGround/PinkBG.png'),
               fit: BoxFit.fill,
             ),
           ),
@@ -57,7 +57,7 @@ class Setting2 extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 24,
-                        fontFamily: 'ONE Mobile POP OTF',
+                        fontFamily: 'ONE Mobile POP OTF.otf',
                         fontWeight: FontWeight.w400,
                         height: 0,
                       ),

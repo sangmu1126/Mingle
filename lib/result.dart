@@ -110,7 +110,6 @@ class Result extends StatelessWidget {
                   width: 393,
                   height: 235.72,
                   child: Stack(children: [
-                      ,
                       ]),
                 ),
               ),

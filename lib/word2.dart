@@ -44,7 +44,6 @@ class Word2 extends StatelessWidget {
                     width: 393,
                     height: 233,
                     child: Stack(children: [
-                        ,
                         ]),
                   ),
                 ),
@@ -111,7 +110,7 @@ class Word2 extends StatelessWidget {
                                 width: 28.12,
                                 height: 45,
                                 child: Stack(children: [
-                                    ,
+
                                     ]),
                               ),
                             ],

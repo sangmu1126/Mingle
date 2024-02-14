@@ -2945,7 +2945,6 @@ class Word1 extends StatelessWidget {
                           width: 15.07,
                           height: 13,
                           child: Stack(children: [
-                              ,
                               ]),
                         ),
                       ),
@@ -2985,7 +2984,6 @@ class Word1 extends StatelessWidget {
                   width: 22,
                   height: 22,
                   child: Stack(children: [
-                      ,
                       ]),
                 ),
               ),

@@ -314,7 +314,7 @@ class Story1 extends StatelessWidget {
                   width: 22,
                   height: 22,
                   child: Stack(children: [
-                      ,
+
                       ]),
                 ),
               ),
@@ -668,7 +668,7 @@ class Story1 extends StatelessWidget {
                                 width: 12.69,
                                 height: 20.30,
                                 child: Stack(children: [
-                                    ,
+
                                     ]),
                               ),
                             ],
