@@ -35,18 +35,19 @@ class _Setting1 extends State<Setting1> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Container(
+      child: Column(
       children: [
         Container(
           width: 393,
           height: 852,
-          padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 256),
+          padding: const EdgeInsets.symmetric(horizontal: 40),
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assets/BackGround/PinkBG.png"),
-              fit: BoxFit.fill,
-            ),
+              image: DecorationImage(
+                image: AssetImage("assets/BackGround/PinkBG.png"),
+                fit: BoxFit.fill,
+              )
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -164,21 +165,31 @@ class _Setting1 extends State<Setting1> {
                     ),
                     Positioned(
                       left: 199,
-                      top: 124,
-                      child: DropdownButton(
+                      top: 116,
+                      child: DropdownButton<String>(
+                        underline: Container(
+                          height: 0,
+                          color: Colors.transparent,
+                        ),
+                        dropdownColor: Colors.white,
+                        style: TextStyle(
+                          color: Color(0xFFEB93AA),
+                          fontSize: 16,
+                          fontFamily: 'Pretendard',
+                          fontWeight: FontWeight.w700,
+                          height: 0,
+                        ),
                         value: _selectedValue,
                         items: _motherLang.map((String item){
                           return DropdownMenuItem<String>(
                             value: item,
-                            child: Text('$item'),
+                            child: Text(item),
                           );
                         }).toList(),
                         onChanged: (String? value) {
-                          if (value != null) {
-                            setState(() {
-                              _selectedValue = value;
-                            });
-                          }
+                          setState(() {
+                            _selectedValue = value!;
+                          });
                         },
                       )
                     ),
@@ -270,35 +281,47 @@ class _Setting1 extends State<Setting1> {
                         ),
                       ),
                     ),
-                    Positioned(
-                      left: 117,
-                      top: 80,
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => Setting2())
-                          );
-                        },
-                        child: Container(
-                          width: 150,
-                          height: 56,
-                          decoration: ShapeDecoration(
-                            color: Color(0xFFF9F9F9),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(40),
-                            ),
-                          ),
-                        )
-                      ),
-                    )
                   ],
                 ),
               ),
+              SizedBox(height: 151),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => Setting2()));
+                  },
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
+                  ),
+                  child: Container(
+                      width: 100,
+                      height: 56,
+                      alignment: Alignment.center,
+                      decoration: ShapeDecoration(
+                        color: Color(0xFFF9F9F9),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(40),
+                        ),
+                      ),
+                      child: Center(
+                          child: Expanded(
+                            child: Text(
+                              '확인 !',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Color(0xFFEB93AA),
+                                fontSize: 17,
+                                fontFamily: 'assets/ONE Mobile POP OTF.otf',
+                                fontWeight: FontWeight.w400,
+                                height: 0.08,
+                                letterSpacing: 0.17,
+                              ),
+                            ),
+                          )))),
             ],
           ),
         ),
       ],
-    );
+    ));
   }
 }
