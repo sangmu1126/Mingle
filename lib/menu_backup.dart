@@ -1,51 +1,43 @@
 import 'package:flutter/material.dart';
-import 'word1.dart';
-import 'word2.dart';
-import 'quiz1.dart';
-//import 'story1.dart';
 
 class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 20, 16, 16),
-      child: Stack(
-        children: [
-          Container(
-            width: double.infinity,
-            height: 550,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/Box/MenuBox.png'),
-                    fit: BoxFit.fill
-                )
-            ),
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                Positioned(
-                  top: 419.37,
-                  child: Container(
-                    width: 315.13,
-                    height: 94.63,
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        Positioned(
-                          left: 0,
-                          top: 0,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Quiz1()));
-                            },
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.transparent, // 배경을 투명하게 설정
-                              shadowColor: Colors.transparent, // 그림자도 투명하게 설정
-                              padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
-                            ),
+      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+      child: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/Box/MenuBox.png'),
+                fit: BoxFit.fill
+            )
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('assets/Box/MenuBox.png'),
+                      fit: BoxFit.fill
+                  )
+              ),
+              child: Column(
+                children: [
+                  Positioned(
+                    left: 22.34,
+                    top: 419.37,
+                    child: Container(
+                      width: 315.13,
+                      height: 94.63,
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Positioned(
+                            left: 0,
+                            top: 0,
                             child: Container(
                               width: 315.13,
                               height: 94.63,
@@ -64,65 +56,52 @@ class Menu extends StatelessWidget {
                                 ],
                               ),
                             ),
-                          )
-                        ),
-                        Positioned(
-                          left: 109.77,
-                          top: 52.05,
-                          child: SizedBox(
-                            width: 205.35,
-                            height: 12.30,
-                            child: Text(
-                              '2-1. 달콤한 과일',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Color(0xFF9D9D9D),
-                                fontSize: 12,
-                                fontFamily: 'ONE Mobile POP OTF',
-                                fontWeight: FontWeight.w400,
-                                height: 0,
+                          ),
+                          Positioned(
+                            left: 109.77,
+                            top: 52.05,
+                            child: SizedBox(
+                              width: 205.35,
+                              height: 12.30,
+                              child: Text(
+                                '2-1. 달콤한 과일',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Color(0xFF9D9D9D),
+                                  fontSize: 12,
+                                  fontFamily: 'ONE Mobile POP OTF',
+                                  fontWeight: FontWeight.w400,
+                                  height: 0,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        Positioned(
-                          left: 109.77,
-                          top: 29.34,
-                          child: SizedBox(
-                            width: 205.35,
-                            height: 20.82,
-                            child: Text(
-                              'Continue',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Color(0xFFF89E4B),
-                                fontSize: 20,
-                                fontFamily: 'ONE Mobile POP OTF',
-                                fontWeight: FontWeight.w400,
-                                height: 0,
+                          Positioned(
+                            left: 109.77,
+                            top: 29.34,
+                            child: SizedBox(
+                              width: 205.35,
+                              height: 20.82,
+                              child: Text(
+                                'Continue',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Color(0xFFF89E4B),
+                                  fontSize: 20,
+                                  fontFamily: 'ONE Mobile POP OTF',
+                                  fontWeight: FontWeight.w400,
+                                  height: 0,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                Positioned(
-                  right: 5,
-                  top: 240.51,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Word0()));
-                    },
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.transparent, // 배경을 투명하게 설정
-                      shadowColor: Colors.transparent, // 그림자도 투명하게 설정
-                      padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
-                    ),
+                  Positioned(
+                    left: 156.71,
+                    top: 240.51,
                     child: Container(
                       width: 205.35,
                       height: 166.55,
@@ -130,7 +109,7 @@ class Menu extends StatelessWidget {
                         alignment: Alignment.center,
                         children: [
                           Positioned(
-                            left: 30,
+                            left: 26.50,
                             top: 15.14,
                             child: Container(
                               width: 151.41,
@@ -186,23 +165,10 @@ class Menu extends StatelessWidget {
                         ],
                       ),
                     ),
-                  )
-                ),
-                Positioned(
-                  left: 5,
-                  top: 255.65,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Word0()));
-                    },
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.transparent, // 배경을 투명하게 설정
-                      shadowColor: Colors.transparent, // 그림자도 투명하게 설정
-                      padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
-                    ),
+                  ),
+                  Positioned(
+                    left: -4,
+                    top: 255.65,
                     child: Container(
                       width: 205.35,
                       height: 151.41,
@@ -210,7 +176,7 @@ class Menu extends StatelessWidget {
                         alignment: Alignment.center,
                         children: [
                           Positioned(
-                            left: 30,
+                            left: 27.44,
                             top: 0,
                             child: Container(
                               width: 151.41,
@@ -232,7 +198,7 @@ class Menu extends StatelessWidget {
                             ),
                           ),
                           Positioned(
-                            left: 5,
+                            // left: 0,
                             top: 108.83,
                             child: SizedBox(
                               width: 205.35,
@@ -266,37 +232,24 @@ class Menu extends StatelessWidget {
                         ],
                       ),
                     ),
-                  )
-                ),
-                Positioned(
-                  left: 57,
-                  top: 429,
-                  child: Container(
-                    width: 80,
-                    height: 80,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('assets/Icon/WordGameIcon.png'),
-                        fit: BoxFit.fill,
+                  ),
+                  Positioned(
+                    left: 57,
+                    top: 429,
+                    child: Container(
+                      width: 80,
+                      height: 80,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/Icon/WordGameIcon.png'),
+                          fit: BoxFit.fill,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Positioned( // Story
-                  right: 5,
-                  top: 94.78,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Word0()));
-                    },
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.transparent, // 배경을 투명하게 설정
-                      shadowColor: Colors.transparent, // 그림자도 투명하게 설정
-                      padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
-                    ),
+                  Positioned(
+                    left: 155.77,
+                    top: 94.78,
                     child: Container(
                       width: 205.35,
                       height: 200,
@@ -304,7 +257,7 @@ class Menu extends StatelessWidget {
                         alignment: Alignment.center,
                         children: [
                           Positioned(
-                            right: 25,
+                            // left: 27.44,
                             top: 0,
                             child: Container(
                               width: 151.41,
@@ -345,6 +298,7 @@ class Menu extends StatelessWidget {
                             ),
                           ),
                           Positioned(
+                            left: 61.51,
                             top: 30,
                             child: Container(
                               width: 100,
@@ -352,7 +306,7 @@ class Menu extends StatelessWidget {
                               child: Stack(
                                 children: [
                                   Positioned(
-                                    left: 10,
+                                    left: 0,
                                     top: 1,
                                     child: Container(
                                       width: 85,
@@ -384,23 +338,10 @@ class Menu extends StatelessWidget {
                         ],
                       ),
                     ),
-                  )
-                ),
-                Positioned( // Words
-                  left: 5,
-                  top: 94.78,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Quiz1()));
-                    },
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.transparent, // 배경을 투명하게 설정
-                      shadowColor: Colors.transparent, // 그림자도 투명하게 설정
-                      padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
-                    ),
+                  ),
+                  Positioned(
+                    left: -3.21,
+                    top: 94.78,
                     child: Container(
                       width: 205.35,
                       height: 151.41,
@@ -408,7 +349,7 @@ class Menu extends StatelessWidget {
                         alignment: Alignment.center,
                         children: [
                           Positioned(
-                            left: 30,
+                            // left: 23.66,
                             top: 0,
                             child: Container(
                               width: 151.41,
@@ -499,97 +440,70 @@ class Menu extends StatelessWidget {
                         ],
                       ),
                     ),
-                  )
-
-                ),
-                Positioned(
-                  right: 30,
-                  top: 35,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.transparent, // 배경을 투명하게 설정
-                      shadowColor: Colors.transparent, // 그림자도 투명하게 설정
-                      padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
-                    ),
+                  ),
+                  Positioned(
+                    left: 294,
+                    top: 38,
                     child: Container(
-                        width: 32,
-                        height: 32,
-                        clipBehavior: Clip.antiAlias,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage('assets/Icon/XIcon.png')
-                            )
+                      width: 32,
+                      height: 32,
+                      clipBehavior: Clip.antiAlias,
+                      decoration: ShapeDecoration(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(37),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 147,
+                    top: 50,
+                    child: SizedBox(
+                        width: 62,
+                        height: 35,
+                        child: DefaultTextStyle(
+                          style: TextStyle(
+                            color: Color(0xFF2D2D2D),
+                            fontSize: 24,
+                            fontFamily: 'ONE Mobile POP OTF',
+                            fontWeight: FontWeight.w400,
+                            height: 0,
+                          ),
+                          child: Text(
+                              '메뉴'),
+                          textAlign: TextAlign.center,
                         )
                     ),
-                  )
-                ),
-                Positioned(
-                  top: 45,
-                  child: SizedBox(
-                      width: 62,
-                      height: 35,
-                      child: DefaultTextStyle(
-                        style: TextStyle(
-                          color: Color(0xFF2D2D2D),
-                          fontSize: 24,
-                          fontFamily: 'ONE Mobile POP OTF',
-                          fontWeight: FontWeight.w400,
-                          height: 0,
-                        ),
-                        child: Text(
-                            '메뉴'),
-                        textAlign: TextAlign.center,
-                      )
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 85,),
+            Container(
+                width: 150,
+                height: 56,
+                decoration: ShapeDecoration(
+                  color: Color(0xFFF9F9F9),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(40),
                   ),
                 ),
-              ],
-            ),
-          ),
-          Positioned(
-            bottom: 50,
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              alignment: Alignment.center,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.transparent, // 배경을 투명하게 설정
-                  shadowColor: Colors.transparent, // 그림자도 투명하게 설정
-                  padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
-                ),
-                child: Container(
-                    width: 150,
-                    height: 56,
-                    decoration: ShapeDecoration(
-                      color: Color(0xFFF9F9F9),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(40),
-                      ),
+                child: Center(
+                  child: DefaultTextStyle(
+                    style: TextStyle(
+                      color: Color(0xFFEB93AA),
+                      fontSize: 17,
+                      fontFamily: 'ONE Mobile POP OTF',
+                      fontWeight: FontWeight.w400,
+                      height: 1,
+                      letterSpacing: 0.17,
                     ),
-                    child: Center(
-                      child: DefaultTextStyle(
-                        style: TextStyle(
-                          color: Color(0xFFEB93AA),
-                          fontSize: 17,
-                          fontFamily: 'ONE Mobile POP OTF',
-                          fontWeight: FontWeight.w400,
-                          height: 1,
-                          letterSpacing: 0.17,
-                        ),
-                        child: Text('확 인!'),
-                      ),
-                    )
-                ),
-              ),
-
-            ),
-          )
-        ],
+                    child: Text('확 인!'),
+                  ),
+                )
+            )
+          ],
+        ),
       ),
     );
   }

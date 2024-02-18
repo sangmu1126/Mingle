@@ -29,6 +29,7 @@ class Word2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
           width: MediaQuery.of(context).size.width, // 화면의 너비
@@ -45,13 +46,13 @@ class Word2 extends StatelessWidget {
                 child: Stack(
                   children: [
                     Image.asset(
-                        alignment: Alignment.centerLeft, width: 393, height: 216,'assets/BackGround/WordGround1.png'),
-                    Image.asset(width: 393, height: 216,'assets/BackGround/WordGround2.png'),
+                        alignment: Alignment.centerLeft, width: MediaQuery.of(context).size.width, height: 216,'assets/BackGround/WordGround1.png', fit: BoxFit.fill,),
+                    Image.asset(width: MediaQuery.of(context).size.width, height: 216,'assets/BackGround/WordGround2.png', fit: BoxFit.fill),
                   ],
                 ),
               ),
               Positioned(
-                left: 111,
+                // left: 111,
                 top: 784,
                 child: SizedBox(
                   width: 171,
@@ -70,7 +71,7 @@ class Word2 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 155,
+                // left: 155,
                 top: 682,
                 child: Container(
                   width: 82,
