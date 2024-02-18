@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'setting3.dart';
-import 'result.dart';
+import 'result2.dart';
 import 'word1.dart';
+import 'finish.dart';
 
 void main() {
   runApp(const FigmaToCodeApp());
@@ -18,14 +18,14 @@ class FigmaToCodeApp extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(children: [
-          Word2(),
+          Quiz3(),
         ]),
       ),
     );
   }
 }
 
-class Word2 extends StatelessWidget {
+class Quiz3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -54,19 +54,19 @@ class Word2 extends StatelessWidget {
                 left: 111,
                 top: 784,
                 child: SizedBox(
-                  width: 171,
-                  height: 68,
-                  child: DefaultTextStyle(
-                    style: TextStyle(
-                      color: Color(0xFF2D2D2D),
-                      fontSize: 20,
-                      fontFamily: 'Pretendard',
-                      fontWeight: FontWeight.w400,
-                      height: 0
-                    ),
-                    child: Text('따라 읽어 볼까요?'),
-                    textAlign: TextAlign.center,
-                  )
+                    width: 171,
+                    height: 68,
+                    child: DefaultTextStyle(
+                      style: TextStyle(
+                          color: Color(0xFF2D2D2D),
+                          fontSize: 20,
+                          fontFamily: 'Pretendard',
+                          fontWeight: FontWeight.w400,
+                          height: 0
+                      ),
+                      child: Text('따라 읽어 볼까요?'),
+                      textAlign: TextAlign.center,
+                    )
                 ),
               ),
               Positioned(
@@ -78,7 +78,7 @@ class Word2 extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => Result2()));},
+                          context, MaterialPageRoute(builder: (context) => Finish()));},
                     style: ElevatedButton.styleFrom(
                       primary: Colors.transparent, // 배경을 투명하게 설정
                       shadowColor: Colors.transparent, // 그림자도 투명하게 설정
@@ -136,35 +136,35 @@ class Word2 extends StatelessWidget {
                   )
               ),
               Positioned(
-                left: 15,
-                top: 50,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => Word0()));
-                  },
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.transparent, // 배경을 투명하게 설정
-                    shadowColor: Colors.transparent, // 그림자도 투명하게 설정
-                    padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
-                  ),
-                  child: Image.asset('assets/Icon/BackB.png'),
-                )
+                  left: 15,
+                  top: 50,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => Word0()));
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.transparent, // 배경을 투명하게 설정
+                      shadowColor: Colors.transparent, // 그림자도 투명하게 설정
+                      padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
+                    ),
+                    child: Image.asset('assets/Icon/BackB.png'),
+                  )
               ),
               Positioned(
-                left: 164,
-                top: 58,
-                child: DefaultTextStyle(
-                  style: TextStyle(
-                    color: Color(0xFF2D2D2D),
-                    fontSize: 24,
-                    fontFamily: 'ONE Mobile POP OTF',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                  ),
-                  child: Text('Word'),
-                  textAlign: TextAlign.center,
-                )
+                  left: 164,
+                  top: 58,
+                  child: DefaultTextStyle(
+                    style: TextStyle(
+                      color: Color(0xFF2D2D2D),
+                      fontSize: 24,
+                      fontFamily: 'ONE Mobile POP OTF',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
+                    ),
+                    child: Text('Word'),
+                    textAlign: TextAlign.center,
+                  )
               ),
               Positioned(
                 left: 34,
@@ -227,47 +227,47 @@ class Word2 extends StatelessWidget {
                                 left: 13,
                                 top: 20,
                                 child: SizedBox(
-                                  width: 46,
-                                  height: 12,
-                                  child: DefaultTextStyle(
-                                    style: TextStyle(
-                                      color: Color(0xFFEB93AA),
-                                      fontSize: 16,
-                                      fontFamily: 'ONE Mobile POP OTF',
-                                      fontWeight: FontWeight.w400,
-                                      height: 0.08,
-                                      letterSpacing: 0.16,
-                                    ),
-                                    child: Text.rich(
-                                      TextSpan(
-                                        children: [
-                                          TextSpan(
-                                            text: '1',
-                                            style: TextStyle(
-                                              color: Color(0xFFEB93AA),
-                                              fontSize: 16,
-                                              fontFamily: 'ONE Mobile POP OTF',
-                                              fontWeight: FontWeight.w400,
-                                              height: 0.08,
-                                              letterSpacing: 0.16,
-                                            ),
-                                          ),
-                                          TextSpan(
-                                            text: '/10',
-                                            style: TextStyle(
-                                              color: Color(0xFF2D2D2D),
-                                              fontSize: 16,
-                                              fontFamily: 'ONE Mobile POP OTF',
-                                              fontWeight: FontWeight.w400,
-                                              height: 0.08,
-                                              letterSpacing: 0.16,
-                                            ),
-                                          ),
-                                        ],
+                                    width: 46,
+                                    height: 12,
+                                    child: DefaultTextStyle(
+                                      style: TextStyle(
+                                        color: Color(0xFFEB93AA),
+                                        fontSize: 16,
+                                        fontFamily: 'ONE Mobile POP OTF',
+                                        fontWeight: FontWeight.w400,
+                                        height: 0.08,
+                                        letterSpacing: 0.16,
                                       ),
-                                    ),
-                                    textAlign: TextAlign.center,
-                                  )
+                                      child: Text.rich(
+                                        TextSpan(
+                                          children: [
+                                            TextSpan(
+                                              text: '3',
+                                              style: TextStyle(
+                                                color: Color(0xFFEB93AA),
+                                                fontSize: 16,
+                                                fontFamily: 'ONE Mobile POP OTF',
+                                                fontWeight: FontWeight.w400,
+                                                height: 0.08,
+                                                letterSpacing: 0.16,
+                                              ),
+                                            ),
+                                            TextSpan(
+                                              text: '/10',
+                                              style: TextStyle(
+                                                color: Color(0xFF2D2D2D),
+                                                fontSize: 16,
+                                                fontFamily: 'ONE Mobile POP OTF',
+                                                fontWeight: FontWeight.w400,
+                                                height: 0.08,
+                                                letterSpacing: 0.16,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    )
                                 ),
                               ),
                             ],
@@ -289,6 +289,30 @@ class Word2 extends StatelessWidget {
                         height: 105,
                         image: AssetImage('assets/Character/bcharacter.png'),
                       ))),
+              Positioned(
+                left: 50,
+                top: 180,
+                child: Image(
+                  image: AssetImage('assets/imgs/order.png'),
+                  width: 300,
+                  height: 300,
+                ),
+              ),
+              Positioned(
+                  left: 55, top: 470,
+                  child: DefaultTextStyle(
+                    style: TextStyle(
+                      color: Color(0xFF2D2D2D),
+                      fontSize: 20,
+                      fontFamily: 'ONE Mobile POP OTF',
+                      fontWeight: FontWeight.w400,
+                      height: 1,
+                      letterSpacing: 0.16,
+                    ),
+                    child: Text('참치김밥 하나랑 떡볶이 두 개 주세요'),
+                    textAlign: TextAlign.center,
+                  )
+              ),
             ],
           ),
         ),

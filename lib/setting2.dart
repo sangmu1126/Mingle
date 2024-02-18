@@ -29,12 +29,8 @@ class Setting2 extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 393,
-          height: 852,
-          padding: const EdgeInsets.only(
-            left: 89,
-            right: 88,
-          ),
+          width: MediaQuery.of(context).size.width, // 화면의 너비
+          height: MediaQuery.of(context).size.height,
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
             image: DecorationImage(
@@ -42,79 +38,81 @@ class Setting2 extends StatelessWidget {
               fit: BoxFit.fill,
             ),
           ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.center,
+          child: Stack(
+            alignment: Alignment.center,
             children: [
-              Text.rich(
-                TextSpan(
-                  children: [
-                    TextSpan(
-                      text: '안녕하세요.\nXin ch',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24,
-                        fontFamily: 'ONE Mobile POP OTF.otf',
-                        fontWeight: FontWeight.w400,
-                        height: 0,
-                      ),
+              Positioned(
+                top: MediaQuery.of(context).size.height/2 - 100,
+                child: DefaultTextStyle(
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 36,
+                    fontFamily: 'ONE Mobile POP OTF',
+                    fontWeight: FontWeight.w400,
+                    height: 0,
+                  ),
+                  child: Text('안녕하세요'),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              Positioned(
+                top: MediaQuery.of(context).size.height/2 - 50,
+                child: DefaultTextStyle(
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 45,
+                    fontFamily: 'ONE Mobile POP OTF',
+                    fontWeight: FontWeight.w400,
+                    height: 0,
+                  ),
+                  child: Text('Xin chào.'),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              Positioned(
+                bottom: 100,
+                child: Container(
+                  width: 216,
+                  height: 56,
+                  padding: EdgeInsets.only(top: 10),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => Setting3()));},
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.transparent, // 배경을 투명하게 설정
+                      shadowColor: Colors.transparent, // 그림자도 투명하게 설정
+                      padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
                     ),
-                    TextSpan(
-                      text: 'à',
+                    child: DefaultTextStyle(
                       style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 32,
-                        fontFamily: 'Acme',
-                        fontWeight: FontWeight.w400,
-                        height: 0,
-                      ),
-                    ),
-                    TextSpan(
-                      text: 'o.',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24,
+                        color: Color(0xFF2D2D2D),
+                        fontSize: 22,
                         fontFamily: 'ONE Mobile POP OTF',
                         fontWeight: FontWeight.w400,
-                        height: 0,
+                        height: 0.5,
+                        letterSpacing: 0.16,
                       ),
+                      child: Text('안녕하세요!'),
+                      textAlign: TextAlign.center,
                     ),
-                  ],
+                  ),
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFF9F9F9),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(40),
+                    ),
+                    shadows: [
+                      BoxShadow(
+                        color: Color(0x33000000),
+                        blurRadius: 4,
+                        offset: Offset(0, 4),
+                        spreadRadius: 0,
+                      )
+                    ],
+                  ),
                 ),
-                textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 185),
-              ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => Setting2()));
-                  },
-                  child: Container(
-                      width: 100,
-                      height: 56,
-                      alignment: Alignment.center,
-                      decoration: ShapeDecoration(
-                        color: Color(0xFFF9F9F9),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(40),
-                        ),
-                      ),
-                      child: Center(
-                          child: Expanded(
-                            child: Text(
-                              '확인 !',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Color(0xFFEB93AA),
-                                fontSize: 17,
-                                fontFamily: 'assets/ONE Mobile POP OTF.otf',
-                                fontWeight: FontWeight.w400,
-                                height: 0.08,
-                                letterSpacing: 0.17,
-                              ),
-                            ),
-                          )))),
             ],
           ),
         ),

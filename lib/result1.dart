@@ -1,8 +1,8 @@
-import 'package:Mingle/quiz2.dart';
 import 'package:Mingle/word1.dart';
 import 'package:flutter/material.dart';
+import 'result.dart';
 import 'word1.dart';
-import 'word2.dart';
+import 'quiz3.dart';
 
 void main() {
   runApp(const FigmaToCodeApp());
@@ -19,14 +19,14 @@ class FigmaToCodeApp extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(children: [
-          Result2(),
+          Result0(),
         ]),
       ),
     );
   }
 }
 
-class Result2 extends StatelessWidget {
+class Result0 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -67,20 +67,20 @@ class Result2 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 157,
-                top: 58,
-                child: DefaultTextStyle(
-                  style: TextStyle(
-                    color: Color(0xFF2D2D2D),
-                    fontSize: 24,
-                    fontFamily: 'ONE Mobile POP OTF',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                  ),
-                  child: Text(
-                    'Result'),
-                  textAlign: TextAlign.center,
-                )
+                  left: 157,
+                  top: 58,
+                  child: DefaultTextStyle(
+                    style: TextStyle(
+                      color: Color(0xFF2D2D2D),
+                      fontSize: 24,
+                      fontFamily: 'ONE Mobile POP OTF',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
+                    ),
+                    child: Text(
+                        'Result'),
+                    textAlign: TextAlign.center,
+                  )
               ),
               Positioned(
                 left: 41,
@@ -156,7 +156,7 @@ class Result2 extends StatelessWidget {
                           child: ElevatedButton(
                             onPressed: () {
                               Navigator.push(
-                                  context, MaterialPageRoute(builder: (context) => Quiz2()));},
+                                  context, MaterialPageRoute(builder: (context) => Quiz3()));},
                             style: ElevatedButton.styleFrom(
                               primary: Colors.transparent, // 배경을 투명하게 설정
                               shadowColor: Colors.transparent, // 그림자도 투명하게 설정
@@ -256,7 +256,7 @@ class Result2 extends StatelessWidget {
                   Positioned(
                       left: MediaQuery.of(context).size.width*3/5,
                       top: 121,
-                      child: Image(image: AssetImage('assets/Icon/Star_Off.png')
+                      child: Image(image: AssetImage('assets/Icon/Star_On.png')
                       )
                   )
                 ],
