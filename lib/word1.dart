@@ -561,7 +561,7 @@ class Word0 extends StatelessWidget {
                             AssetImage(("assets/Character/ycharacter.png")))),
               ),
               Positioned(
-                  left: 300,
+                  right: 30,
                   top: 60,
                   child: ElevatedButton(
                       onPressed: () {
