@@ -44,9 +44,8 @@ class Result2 extends StatelessWidget {
                 bottom: 0,
                 child: Stack(
                   children: [
-                    Image.asset(
-                        alignment: Alignment.centerLeft, width: 393, height: 216,'assets/BackGround/WordGround1.png'),
-                    Image.asset(alignment: Alignment.centerRight, width: 393, height: 216,'assets/BackGround/WordGround2.png'),
+                    Image.asset(width: MediaQuery.of(context).size.width, height: 216,'assets/BackGround/WordGround1.png',fit: BoxFit.fill,),
+                    Image.asset(width: MediaQuery.of(context).size.width, height: 216,'assets/BackGround/WordGround2.png', fit: BoxFit.fill,),
                   ],
                 ),
               ),
@@ -67,7 +66,7 @@ class Result2 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 157,
+                left: 175,
                 top: 58,
                 child: DefaultTextStyle(
                   style: TextStyle(
@@ -260,6 +259,16 @@ class Result2 extends StatelessWidget {
                       )
                   )
                 ],
+              ),
+              Positioned(
+                  top: 590,
+                  left: 230,
+                  child: Image.asset('assets/Icon/Heart.png')
+              ),
+              Positioned(
+                  top: 620,
+                  left: 200,
+                  child: Image.asset('assets/Icon/Heart.png')
               ),
             ],
           ),

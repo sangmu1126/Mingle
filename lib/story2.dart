@@ -1,7 +1,8 @@
+import 'package:Mingle/story1.dart';
 import 'package:flutter/material.dart';
-import 'result2.dart';
+import 'save.dart';
+import 'result.dart';
 import 'word1.dart';
-import 'finish.dart';
 
 void main() {
   runApp(const FigmaToCodeApp());
@@ -18,24 +19,29 @@ class FigmaToCodeApp extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(children: [
-          Quiz3(),
+          Story2(),
         ]),
       ),
     );
   }
 }
 
-class Quiz3 extends StatelessWidget {
+class Story2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
           width: MediaQuery.of(context).size.width, // 화면의 너비
           height: MediaQuery.of(context).size.height, // 화면의 높이
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
-              color: Color(0xFFEAF8FF)),
+            image: DecorationImage(
+              image: AssetImage('assets/BackGround/BlueBG.png'),
+              fit: BoxFit.fill,
+            ),
+          ),
           child: Stack(
             alignment: Alignment.center,
             children: [
@@ -44,13 +50,13 @@ class Quiz3 extends StatelessWidget {
                 bottom: 0,
                 child: Stack(
                   children: [
-                    Image.asset(width: MediaQuery.of(context).size.width, height: 216,'assets/BackGround/WordGround1.png',fit: BoxFit.fill,),
-                    Image.asset(width: MediaQuery.of(context).size.width, height: 216,'assets/BackGround/WordGround2.png', fit: BoxFit.fill,),
+                    Image.asset(width: MediaQuery.of(context).size.width, height: 216,'assets/BackGround/StoryGround3.png',fit: BoxFit.fill,),
+                    Image.asset(width: MediaQuery.of(context).size.width, height: 216,'assets/BackGround/StoryGround4.png', fit: BoxFit.fill,),
                   ],
                 ),
               ),
               Positioned(
-                left: 111,
+                // left: 111,
                 top: 784,
                 child: SizedBox(
                     width: 171,
@@ -69,7 +75,7 @@ class Quiz3 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 155,
+                // left: 155,
                 top: 682,
                 child: Container(
                   width: 82,
@@ -77,7 +83,8 @@ class Quiz3 extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
-                          context, MaterialPageRoute(builder: (context) => Finish()));},
+                          context, MaterialPageRoute(builder: (context) => Save()));
+                      },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.transparent, // 배경을 투명하게 설정
                       shadowColor: Colors.transparent, // 그림자도 투명하게 설정
@@ -140,33 +147,33 @@ class Quiz3 extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
-                          context, MaterialPageRoute(builder: (context) => Word0()));
+                          context, MaterialPageRoute(builder: (context) => Story1()));
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.transparent, // 배경을 투명하게 설정
                       shadowColor: Colors.transparent, // 그림자도 투명하게 설정
                       padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
                     ),
-                    child: Image.asset('assets/Icon/BackB.png'),
+                    child: Image.asset('assets/Icon/Back.png'),
                   )
               ),
               Positioned(
-                  left: 164,
+                  left: 175,
                   top: 58,
                   child: DefaultTextStyle(
                     style: TextStyle(
-                      color: Color(0xFF2D2D2D),
+                      color: Color(0xFFF9F9F9),
                       fontSize: 24,
                       fontFamily: 'ONE Mobile POP OTF',
                       fontWeight: FontWeight.w400,
                       height: 0,
                     ),
-                    child: Text('Word'),
+                    child: Text('Story'),
                     textAlign: TextAlign.center,
                   )
               ),
               Positioned(
-                left: 34,
+                left: 45,
                 top: 132,
                 child: Container(
                   width: 325,
@@ -185,7 +192,7 @@ class Quiz3 extends StatelessWidget {
                               side: BorderSide(
                                 width: 10,
                                 strokeAlign: BorderSide.strokeAlignOutside,
-                                color: Color(0xFFF8D8DD),
+                                color: Color(0xFFD4F6FF),
                               ),
                               borderRadius: BorderRadius.circular(30),
                             ),
@@ -241,7 +248,7 @@ class Quiz3 extends StatelessWidget {
                                         TextSpan(
                                           children: [
                                             TextSpan(
-                                              text: '3',
+                                              text: '1',
                                               style: TextStyle(
                                                 color: Color(0xFFEB93AA),
                                                 fontSize: 16,
@@ -278,40 +285,84 @@ class Quiz3 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                  left: 275,
+                  right: -95,
                   top: 100,
                   child: Transform(
-                      transform: Matrix4.identity()..scale(-1.0, 1.0, 1.0),
-                      alignment: Alignment.center,
-                      child: Image(
-                        width: 105,
-                        height: 105,
-                        image: AssetImage('assets/Character/bcharacter.png'),
-                      ))),
-              Positioned(
-                left: 50,
-                top: 180,
-                child: Image(
-                  image: AssetImage('assets/imgs/order.png'),
-                  width: 300,
-                  height: 300,
-                ),
-              ),
-              Positioned(
-                  left: 55, top: 470,
-                  child: DefaultTextStyle(
-                    style: TextStyle(
-                      color: Color(0xFF2D2D2D),
-                      fontSize: 20,
-                      fontFamily: 'ONE Mobile POP OTF',
-                      fontWeight: FontWeight.w400,
-                      height: 1,
-                      letterSpacing: 0.16,
+                    transform: Matrix4.identity()..scale(-1.0, 1.0, 1.0),
+                    child: Image(
+                      width: 105,
+                      height: 105,
+                      image: AssetImage('assets/Character/pcharacter.png'),
                     ),
-                    child: Text('참치김밥 하나랑 떡볶이 두 개 주세요'),
-                    textAlign: TextAlign.center,
                   )
               ),
+              Positioned(
+                left: 53,
+                top: 562,
+                child: Container(
+                  width: 310,
+                  height: 28,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 0,
+                        top: 8,
+                        child: Container(
+                          width: 310,
+                          height: 12,
+                          decoration: ShapeDecoration(
+                            color: Color(0xFFE3E3F1),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(40),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 0,
+                        top: 8,
+                        child: Container(
+                          width: 149.69,
+                          height: 12,
+                          decoration: ShapeDecoration(
+                            color: Color(0xFF8ED9F0),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(40),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 132,
+                        top: 0,
+                        child: Container(
+                          width: 20,
+                          height: 28,
+                          child: Stack(
+                            children: [
+                              Positioned(
+                                left: 0,
+                                top: 0,
+                                child: Container(
+                                  width: 20,
+                                  height: 28,
+                                  decoration: ShapeDecoration(
+                                    color: Colors.white,
+                                    shape: RoundedRectangleBorder(
+                                      side: BorderSide(width: 3, color: Color(0xFF8ED9F0)),
+                                      borderRadius: BorderRadius.circular(40),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ),

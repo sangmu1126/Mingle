@@ -225,7 +225,7 @@ class _Question extends State<Question> {
               ),
               Positioned(
                 left: 30,
-                bottom: 50,
+                bottom: 30,
                   child: Container(
                     width: 365,
                     height: 60,

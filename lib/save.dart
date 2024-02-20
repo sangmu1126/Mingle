@@ -1,9 +1,8 @@
+import 'package:Mingle/quiz2.dart';
 import 'package:Mingle/word1.dart';
 import 'package:flutter/material.dart';
-import 'result.dart';
 import 'word1.dart';
-import 'word2.dart';
-import 'result1.dart';
+import 'story1.dart';
 
 void main() {
   runApp(const FigmaToCodeApp());
@@ -20,14 +19,14 @@ class FigmaToCodeApp extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(children: [
-          Result4(),
+          Save(),
         ]),
       ),
     );
   }
 }
 
-class Result4 extends StatelessWidget {
+class Save extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -36,7 +35,12 @@ class Result4 extends StatelessWidget {
           width: MediaQuery.of(context).size.width, // 화면의 너비
           height: MediaQuery.of(context).size.height, // 화면의 높이
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Color(0xFFEAF8FF)),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/BackGround/BlueBG.png'),
+              fit: BoxFit.fill,
+            ),
+          ),
           child: Stack(
             alignment: Alignment.center,
             children: [
@@ -45,40 +49,59 @@ class Result4 extends StatelessWidget {
                 bottom: 0,
                 child: Stack(
                   children: [
-                    Image.asset(width: MediaQuery.of(context).size.width, height: 216,'assets/BackGround/WordGround1.png',fit: BoxFit.fill,),
-                    Image.asset(width: MediaQuery.of(context).size.width, height: 216,'assets/BackGround/WordGround2.png', fit: BoxFit.fill,),
+                    Image.asset(width: MediaQuery.of(context).size.width, height: 216,'assets/BackGround/StoryGround3.png',fit: BoxFit.fill,),
+                    Image.asset(width: MediaQuery.of(context).size.width, height: 216,'assets/BackGround/StoryGround4.png', fit: BoxFit.fill,),
                   ],
                 ),
               ),
               Positioned(
-                left: 56,
-                top: 466,
-                child: Container(
-                  width: 285,
-                  decoration: ShapeDecoration(
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                        width: 2,
-                        strokeAlign: BorderSide.strokeAlignCenter,
+                left: 70,
+                top: 422,
+                child: Stack(
+                  children: [
+                    Container(
+                      width: 254,
+                      height: 23,
+                      decoration: ShapeDecoration(
                         color: Color(0xFF8ED9F0),
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(width: 2, color: Color(0xFF8ED9F0)),
+                          borderRadius: BorderRadius.circular(54),
+                        ),
+                      ),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 5.0),
+                          child: Container(
+                            width: 227,
+                            height: 13,
+                            decoration: ShapeDecoration(
+                              color: Color(0xFFF9F9F9),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(54),
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
                     ),
-                  ),
+                  ],
                 ),
               ),
               Positioned(
-                  left: 157,
+                  left: 175,
                   top: 58,
                   child: DefaultTextStyle(
                     style: TextStyle(
-                      color: Color(0xFF2D2D2D),
+                      color: Color(0xFFF9F9F9),
                       fontSize: 24,
                       fontFamily: 'ONE Mobile POP OTF',
                       fontWeight: FontWeight.w400,
                       height: 0,
                     ),
                     child: Text(
-                        'Result'),
+                        'Save'),
                     textAlign: TextAlign.center,
                   )
               ),
@@ -101,7 +124,7 @@ class Result4 extends StatelessWidget {
                           child: ElevatedButton(
                             onPressed: () {
                               Navigator.push(
-                                  context, MaterialPageRoute(builder: (context) => Word0()));},
+                                  context, MaterialPageRoute(builder: (context) => Story1()));},
                             style: ElevatedButton.styleFrom(
                               primary: Colors.transparent, // 배경을 투명하게 설정
                               shadowColor: Colors.transparent, // 그림자도 투명하게 설정
@@ -138,7 +161,7 @@ class Result4 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 206,
+                right: 40,
                 bottom: 44,
                 child: Container(
                   width: 149,
@@ -156,7 +179,7 @@ class Result4 extends StatelessWidget {
                           child: ElevatedButton(
                             onPressed: () {
                               Navigator.push(
-                                  context, MaterialPageRoute(builder: (context) => Result0()));},
+                                  context, MaterialPageRoute(builder: (context) => Story1()));},
                             style: ElevatedButton.styleFrom(
                               primary: Colors.transparent, // 배경을 투명하게 설정
                               shadowColor: Colors.transparent, // 그림자도 투명하게 설정
@@ -233,34 +256,74 @@ class Result4 extends StatelessWidget {
                     height: 105,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage("assets/Icon/WordGameIcon.png"),
+                        image: AssetImage("assets/Icon/StoryGameIcon.png"),
                         fit: BoxFit.fill,
                       ),
                     ),
                   )
               ),
-              Stack(
-                children: [
-                  Positioned(
-                      left: MediaQuery.of(context).size.width*1/5,
-                      top: 121,
-                      child: Image(image: AssetImage('assets/Icon/Star_Off.png')
-                      )
-                  ),
-                  Positioned(
-                      left: MediaQuery.of(context).size.width*2/5,
-                      top: 121,
-                      child: Image(image: AssetImage('assets/Icon/Star_Off.png')
-                      )
-                  ),
-                  Positioned(
-                      left: MediaQuery.of(context).size.width*3/5,
-                      top: 121,
-                      child: Image(image: AssetImage('assets/Icon/Star_Off.png')
-                      )
-                  )
-                ],
+              Positioned(
+                  top: 450,
+                  left: 74,
+                  child: DefaultTextStyle(
+                    style: TextStyle(
+                      color: Color(0xFFF9F9F9),
+                      fontSize: 14,
+                      fontFamily: 'ONE Mobile POP OTF',
+                      fontWeight: FontWeight.w600,
+                      height: 0,
+                    ),
+                    child: Text('진도율'),
+                    textAlign: TextAlign.center,
+                )
               ),
+              Positioned(
+                  top: 450,
+                  left: 290,
+                  child: DefaultTextStyle(
+                    style: TextStyle(
+                      color: Color(0xFFF9F9F9),
+                      fontSize: 14,
+                      fontFamily: 'ONE Mobile POP OTF',
+                      fontWeight: FontWeight.w600,
+                      height: 0,
+                    ),
+                    child: Text('85%'),
+                    textAlign: TextAlign.center,
+                  )
+              ),
+              Positioned(
+                  top: 590,
+                  left: 230,
+                  child: Image.asset('assets/Icon/Heart.png')
+              ),
+              Positioned(
+                  top: 620,
+                  left: 200,
+                  child: Image.asset('assets/Icon/Heart.png')
+              ),
+              // Stack(
+              //   children: [
+              //     Positioned(
+              //         left: MediaQuery.of(context).size.width*1/5,
+              //         top: 121,
+              //         child: Image(image: AssetImage('assets/Icon/Star_On.png')
+              //         )
+              //     ),
+              //     Positioned(
+              //         left: MediaQuery.of(context).size.width*2/5,
+              //         top: 121,
+              //         child: Image(image: AssetImage('assets/Icon/Star_On.png')
+              //         )
+              //     ),
+              //     Positioned(
+              //         left: MediaQuery.of(context).size.width*3/5,
+              //         top: 121,
+              //         child: Image(image: AssetImage('assets/Icon/Star_Off.png')
+              //         )
+              //     )
+              //   ],
+              // ),
             ],
           ),
         ),

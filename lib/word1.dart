@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'word2.dart';
 import 'menu.dart';
 import 'quiz1.dart';
+import 'story1.dart';
 
 void main() {
   runApp(const FigmaToCodeApp());
@@ -47,13 +48,24 @@ class Word0 extends StatelessWidget {
               Positioned(
                 // left: 136,
                 top: 627,
-                child: Container(
-                  width: 120,
-                  height: 120,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/BackGround/Stage_On.png"),
-                      fit: BoxFit.fill,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => Quiz1()));
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.transparent, // 배경을 투명하게 설정
+                    shadowColor: Colors.transparent, // 그림자도 투명하게 설정
+                    padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
+                  ),
+                  child: Container(
+                    width: 120,
+                    height: 120,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("assets/BackGround/Stage_On.png"),
+                        fit: BoxFit.fill,
+                      ),
                     ),
                   ),
                 ),
@@ -462,14 +474,12 @@ class Word0 extends StatelessWidget {
               ),
               Positioned(
                 left: 50,
-                top: 711,
+                top: 740,
                 child: Container(
                   width: 80,
                   height: 80,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
-                          context, MaterialPageRoute(builder: (context) => Quiz1()));
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.transparent, // 배경을 투명하게 설정
@@ -488,14 +498,14 @@ class Word0 extends StatelessWidget {
               ),
               Positioned(
                 right: 50,
-                top: 711,
+                top: 740,
                 child: Container(
                   width: 80,
                   height: 80,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
-                          context, MaterialPageRoute(builder: (context) => Word0()));
+                          context, MaterialPageRoute(builder: (context) => Story1()));
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.transparent, // 배경을 투명하게 설정
@@ -514,7 +524,7 @@ class Word0 extends StatelessWidget {
               ),
               Positioned(
                 left: 36,
-                top: 795,
+                top: 825,
                 child: SizedBox(
                   width: 116,
                   height: 25,
@@ -533,7 +543,7 @@ class Word0 extends StatelessWidget {
               ),
               Positioned(
                 right: 36,
-                top: 796,
+                top: 825,
                 child: SizedBox(
                   width: 111,
                   height: 25,

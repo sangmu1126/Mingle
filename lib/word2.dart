@@ -45,9 +45,8 @@ class Word2 extends StatelessWidget {
                 bottom: 0,
                 child: Stack(
                   children: [
-                    Image.asset(
-                        alignment: Alignment.centerLeft, width: MediaQuery.of(context).size.width, height: 216,'assets/BackGround/WordGround1.png', fit: BoxFit.fill,),
-                    Image.asset(width: MediaQuery.of(context).size.width, height: 216,'assets/BackGround/WordGround2.png', fit: BoxFit.fill),
+                    Image.asset(width: MediaQuery.of(context).size.width, height: 216,'assets/BackGround/WordGround1.png',fit: BoxFit.fill,),
+                    Image.asset(width: MediaQuery.of(context).size.width, height: 216,'assets/BackGround/WordGround2.png', fit: BoxFit.fill,),
                   ],
                 ),
               ),
@@ -168,7 +167,7 @@ class Word2 extends StatelessWidget {
                 )
               ),
               Positioned(
-                left: 34,
+                left: 45,
                 top: 132,
                 child: Container(
                   width: 325,

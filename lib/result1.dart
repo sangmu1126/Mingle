@@ -44,9 +44,8 @@ class Result0 extends StatelessWidget {
                 bottom: 0,
                 child: Stack(
                   children: [
-                    Image.asset(
-                        alignment: Alignment.centerLeft, width: 393, height: 216,'assets/BackGround/WordGround1.png'),
-                    Image.asset(alignment: Alignment.centerRight, width: 393, height: 216,'assets/BackGround/WordGround2.png'),
+                    Image.asset(width: MediaQuery.of(context).size.width, height: 216,'assets/BackGround/WordGround1.png',fit: BoxFit.fill,),
+                    Image.asset(width: MediaQuery.of(context).size.width, height: 216,'assets/BackGround/WordGround2.png', fit: BoxFit.fill,),
                   ],
                 ),
               ),

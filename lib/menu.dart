@@ -1,4 +1,5 @@
 import 'package:Mingle/question.dart';
+import 'package:Mingle/story1.dart';
 import 'package:flutter/material.dart';
 import 'word1.dart';
 import 'word2.dart';
@@ -292,7 +293,7 @@ class Menu extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Word0()));
+                              builder: (context) => Story1()));
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.transparent, // 배경을 투명하게 설정
@@ -396,7 +397,7 @@ class Menu extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Quiz1()));
+                              builder: (context) => Word0()));
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.transparent, // 배경을 투명하게 설정
@@ -551,6 +552,7 @@ class Menu extends StatelessWidget {
             ),
           ),
           Positioned(
+            left: -15,
             bottom: 50,
             child: Container(
               width: MediaQuery.of(context).size.width,
