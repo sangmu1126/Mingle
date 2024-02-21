@@ -79,7 +79,7 @@ class Quiz3 extends StatelessWidget {
                       Navigator.push(
                           context, MaterialPageRoute(builder: (context) => Finish()));},
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.transparent, // 배경을 투명하게 설정
+                      backgroundColor: Colors.transparent, // 배경을 투명하게 설정
                       shadowColor: Colors.transparent, // 그림자도 투명하게 설정
                       padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
                     ),
@@ -143,7 +143,7 @@ class Quiz3 extends StatelessWidget {
                           context, MaterialPageRoute(builder: (context) => Word0()));
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.transparent, // 배경을 투명하게 설정
+                      backgroundColor: Colors.transparent, // 배경을 투명하게 설정
                       shadowColor: Colors.transparent, // 그림자도 투명하게 설정
                       padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
                     ),

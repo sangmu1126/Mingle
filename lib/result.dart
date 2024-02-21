@@ -102,7 +102,7 @@ class Result2 extends StatelessWidget {
                               Navigator.push(
                                   context, MaterialPageRoute(builder: (context) => Word0()));},
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.transparent, // 배경을 투명하게 설정
+                              backgroundColor: Colors.transparent, // 배경을 투명하게 설정
                               shadowColor: Colors.transparent, // 그림자도 투명하게 설정
                               padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
                             ),
@@ -157,7 +157,7 @@ class Result2 extends StatelessWidget {
                               Navigator.push(
                                   context, MaterialPageRoute(builder: (context) => Quiz2()));},
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.transparent, // 배경을 투명하게 설정
+                              backgroundColor: Colors.transparent, // 배경을 투명하게 설정
                               shadowColor: Colors.transparent, // 그림자도 투명하게 설정
                               padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
                             ),
@@ -261,12 +261,12 @@ class Result2 extends StatelessWidget {
                 ],
               ),
               Positioned(
-                  top: 590,
+                  top: 560,
                   left: 230,
                   child: Image.asset('assets/Icon/Heart.png')
               ),
               Positioned(
-                  top: 620,
+                  top: 590,
                   left: 200,
                   child: Image.asset('assets/Icon/Heart.png')
               ),

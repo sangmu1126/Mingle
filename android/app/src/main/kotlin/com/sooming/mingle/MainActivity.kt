@@ -1,4 +1,4 @@
-package com.sooming.first_project
+package com.sooming.mingle
 
 import io.flutter.embedding.android.FlutterActivity
 

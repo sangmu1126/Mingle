@@ -54,7 +54,7 @@ class Word0 extends StatelessWidget {
                         context, MaterialPageRoute(builder: (context) => Quiz1()));
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.transparent, // 배경을 투명하게 설정
+                    backgroundColor: Colors.transparent, // 배경을 투명하게 설정
                     shadowColor: Colors.transparent, // 그림자도 투명하게 설정
                     padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
                   ),
@@ -474,7 +474,7 @@ class Word0 extends StatelessWidget {
               ),
               Positioned(
                 left: 50,
-                top: 740,
+                top: 710,
                 child: Container(
                   width: 80,
                   height: 80,
@@ -482,7 +482,7 @@ class Word0 extends StatelessWidget {
                     onPressed: () {
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.transparent, // 배경을 투명하게 설정
+                      backgroundColor: Colors.transparent, // 배경을 투명하게 설정
                       shadowColor: Colors.transparent, // 그림자도 투명하게 설정
                       padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
                     ),
@@ -498,7 +498,7 @@ class Word0 extends StatelessWidget {
               ),
               Positioned(
                 right: 50,
-                top: 740,
+                top: 710,
                 child: Container(
                   width: 80,
                   height: 80,
@@ -508,7 +508,7 @@ class Word0 extends StatelessWidget {
                           context, MaterialPageRoute(builder: (context) => Story1()));
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.transparent, // 배경을 투명하게 설정
+                      backgroundColor: Colors.transparent, // 배경을 투명하게 설정
                       shadowColor: Colors.transparent, // 그림자도 투명하게 설정
                       padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
                     ),
@@ -524,7 +524,7 @@ class Word0 extends StatelessWidget {
               ),
               Positioned(
                 left: 36,
-                top: 825,
+                top: 795,
                 child: SizedBox(
                   width: 116,
                   height: 25,
@@ -543,7 +543,7 @@ class Word0 extends StatelessWidget {
               ),
               Positioned(
                 right: 36,
-                top: 825,
+                top: 795,
                 child: SizedBox(
                   width: 111,
                   height: 25,
@@ -588,7 +588,7 @@ class Word0 extends StatelessWidget {
                         );
                       },
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.transparent, // 배경을 투명하게 설정
+                      backgroundColor: Colors.transparent, // 배경을 투명하게 설정
                       shadowColor: Colors.transparent, // 그림자도 투명하게 설정
                       padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
                     ),
