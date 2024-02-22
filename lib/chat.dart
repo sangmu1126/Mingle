@@ -45,7 +45,7 @@ class _Setting1 extends State<Chat> {
                 image: AssetImage("assets/BackGround/PinkBG.png"),
                 fit: BoxFit.fill,
               )),
-          child: ListView(
+          child: Stack(
             children: [
               SentMessage(
                 message: "USER INPUT",
@@ -57,6 +57,7 @@ class _Setting1 extends State<Chat> {
                 background: Colors.black12,
                 textColor: Colors.black,
               ),
+              // ChatView(chatController: chatController, currentUser: currentUser, chatViewState: chatViewState)
             ],
           ),
         ),

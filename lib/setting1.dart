@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'setting2.dart';
 
 void main() {
@@ -32,6 +33,8 @@ class Setting1 extends StatefulWidget {
 class _Setting1 extends State<Setting1> {
   final List<String> _motherLang = ['Vietnamese', 'English', 'Chinese'];
   String _selectedValue = 'Vietnamese';
+  bool _isChecked = false;
+  Color myPink = Color(0xFFEB93AA);
 
   @override
   Widget build(BuildContext context) {
@@ -277,6 +280,19 @@ class _Setting1 extends State<Setting1> {
                           ),
                         ),
                       ),
+                      Positioned(
+                        left: 230,
+                          top: 250,
+                          child: CupertinoSwitch(
+                            value: _isChecked,
+                            onChanged: (value) {
+                              setState(() {
+                                _isChecked = value;
+                              });
+                            },
+                            activeColor: myPink,
+                          ),
+                      )
                     ],
                   ),
                 ),

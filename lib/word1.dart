@@ -513,7 +513,7 @@ class Word0 extends StatelessWidget {
                       padding: EdgeInsets.zero, // 버튼의 패딩을 제거합니다.
                     ),
                     child: Image(
-                      width: 80,
+                      width: 70,
                       height: 80,
                       image: AssetImage("assets/Icon/StoryIcon_B.png"),
                       fit: BoxFit.fill,

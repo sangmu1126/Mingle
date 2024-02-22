@@ -2,7 +2,7 @@ import 'package:Mingle/question.dart';
 import 'package:Mingle/story1.dart';
 import 'package:flutter/material.dart';
 import 'word1.dart';
-import 'word2.dart';
+import 'setting.dart';
 import 'quiz1.dart';
 import 'question.dart';
 //import 'story1.dart';
@@ -119,7 +119,7 @@ class Menu extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Word0()));
+                              builder: (context) => Setting()));
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.transparent, // 배경을 투명하게 설정
