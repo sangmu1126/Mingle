@@ -24,7 +24,7 @@ class FigmaToCodeApp extends StatelessWidget {
     );
   }
 }
-
+// chat stateful
 class Chat extends StatefulWidget {
   @override
   _Setting1 createState() => _Setting1();
