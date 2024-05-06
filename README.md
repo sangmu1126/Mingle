@@ -1,24 +1,24 @@
-📦Mingle
-┣ 📂android
- ┃ ┣ 📂.gradle
-┃ ┣ 📂app
- ┃ ┃ ┣ 📜build.gradle
- ┃ ┃ ┗ 📜google-services.json
- ┃ ┣ 📂gradle
- ┃ ┃ ┗ 📂wrapper
- ┃ ┣ 📂src
- ┃ ┣ 📜build.gradle
-┣ 📂assets
- ┃ ┣ 📂Box
- ┃ ┣ 📂Character
- ┃ ┣ 📂fonts
- ┃ ┣ 📂Icon
- ┃ ┗ 📂imgs
-┣ 📂functions
-┣ 📂lib
- ┣ 📜.firebaserc
- ┣ 📜.flutter-plugins
- ┣ 📜.flutter-plugins-dependencies
- ┣ 📜firebase.json
- ┣ 📜flutter_launcher_icons.yaml
- ┣ 📜google-services.json
+📦Mingle<br/>
+┣ 📂android<br/>
+ ┃ ┣ 📂.gradle<br/>
+┃ ┣ 📂app<br/>
+ ┃ ┃ ┣ 📜build.gradle<br/>
+ ┃ ┃ ┗ 📜google-services.json<br/>
+ ┃ ┣ 📂gradle<br/>
+ ┃ ┃ ┗ 📂wrapper<br/>
+ ┃ ┣ 📂src<br/>
+ ┃ ┣ 📜build.gradle<br/>
+┣ 📂assets<br/>
+ ┃ ┣ 📂Box<br/>
+ ┃ ┣ 📂Character<br/>
+ ┃ ┣ 📂fonts<br/>
+ ┃ ┣ 📂Icon<br/>
+ ┃ ┗ 📂imgs<br/>
+┣ 📂functions<br/>
+┣ 📂lib<br/>
+ ┣ 📜.firebaserc<br/>
+ ┣ 📜.flutter-plugins<br/>
+ ┣ 📜.flutter-plugins-dependencies<br/>
+ ┣ 📜firebase.json<br/>
+ ┣ 📜flutter_launcher_icons.yaml<br/>
+ ┣ 📜google-services.json<br/>
